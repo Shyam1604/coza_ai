@@ -15,7 +15,6 @@ google_api_key = os.getenv("GOOGLE_API_KEY")
 
 # Initialize the LLM (GoogleGenerativeAI)
 llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=google_api_key, temperature=0.6)
-# llm = GoogleGenerativeAI(model="gemini-pro", google_api_key="AIzaSyD57tV2lShP6TsFdY5HoJY1PDCLX2rYTFw", temperature=0.6)
 
 # Initialize Hugging Face embeddings
 embeddings = HuggingFaceEmbeddings()
