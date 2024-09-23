@@ -5,13 +5,14 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from dotenv import load_dotenv
 import os
+import streamlit as st
 
 load_dotenv()  # Take environment variables from .env (especially OpenAI API key)
 
 from langchain_google_genai import GoogleGenerativeAI
 
 # Fetch the API key from the environment
-google_api_key = os.getenv("GOOGLE_API_KEY")
+google_api_key = st.secrets["GOOGLE_API_KEY"]
 
 # Initialize the LLM (GoogleGenerativeAI)
 llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=google_api_key, temperature=0.6)
