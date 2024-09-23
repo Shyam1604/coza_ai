@@ -141,6 +141,8 @@ if page_options == "Home":
                 st.session_state.history.append((query, result))
             except Exception as e:
                 st.error(f"Error: {e}")
+        else:
+            display_instructions()
 
 # Display user history if selected
 elif page_options == "View History":
