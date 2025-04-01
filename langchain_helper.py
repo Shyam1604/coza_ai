@@ -15,7 +15,7 @@ from langchain_google_genai import GoogleGenerativeAI
 google_api_key = st.secrets["GOOGLE_API_KEY"]
 
 # Initialize the LLM (GoogleGenerativeAI)
-llm = GoogleGenerativeAI(model="gemini-pro", google_api_key=google_api_key, temperature=0.6)
+llm = GoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=google_api_key, temperature=0.6)
 
 # Initialize Hugging Face embeddings
 embeddings = HuggingFaceEmbeddings()
