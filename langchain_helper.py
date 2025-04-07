@@ -18,7 +18,8 @@ google_api_key = st.secrets["GOOGLE_API_KEY"]
 llm = GoogleGenerativeAI(model="gemini-2.0-flash", google_api_key=google_api_key, temperature=0.6)
 
 # Initialize Hugging Face embeddings
-embeddings = HuggingFaceEmbeddings()
+# embeddings = HuggingFaceEmbeddings()
+embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")  # or another small, supported model
 
 # Path to save/load the FAISS vector database
 vectordb_file_path = "vector_database"
